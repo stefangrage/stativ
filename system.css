@@ -1,14 +1,16 @@
 /*
 System styles
 1: Reset
-2: Variables
+2: Variables & tokens
 3: Breakpoints
 4: Layout/Grid
 5: Typography
 6: Forms
 7: Buttons
-8: Components
-9: Custom CSS
+8: Media
+9: Helpers
+10: Components
+11: Custom CSS
 */
 
 /*1: Reset*/
@@ -66,6 +68,7 @@ button, input, textarea, select {
     --color-bright: rgba(249, 250, 251, 1);
 
 /* ===== Spacing ===== */
+    --space-zero: 0;
     --space-xs: 0.25rem;
     --space-sm: 0.5rem;
     --space-md: 1rem;
@@ -109,7 +112,9 @@ button, input, textarea, select {
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/*Surface*/
+
+
+/*Tokens - surface*/
 .bg-dark {
     background-color: var(--color-dark);
 }
@@ -144,7 +149,7 @@ button, input, textarea, select {
 }
 
 .container, .container-narrow, .container-full {
-    padding: var(--space-md);
+    padding: var(--space-xxl) var(--space-md);
 }
 
 /* 4: Grid */
@@ -154,7 +159,6 @@ button, input, textarea, select {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: var(--space-xl); 
-    margin-bottom: var(--space-xl); 
     grid-auto-rows: minmax(var(--space-xxxl), auto);
 }
 
@@ -543,7 +547,17 @@ img {
     height: auto;
 }
 
-/* 8: Components */
+/* 9: Helpers */
+.spacing-zero { padding: var(--space-zero); }
+.spacing-xs { padding: var(--space-xs); }
+.spacing-sm { padding: var(--space-sm); }
+.spacing-md { padding: var(--space-md); }   
+.spacing-lg { padding: var(--space-lg); }
+.spacing-xl { padding: var(--space-xl); } 
+.spacing-xxl { padding: var(--space-xxl); }
+.spacing-xxxl { padding: var(--space-xxxl); }
+
+/* 10: Components */
 
 /* Cards */
 .card {
@@ -575,4 +589,8 @@ img {
   color: var(--color-secondary-dark);
 }
 
-/*Custom CSS*/
+
+
+/*11: Custom CSS*/
+
+
