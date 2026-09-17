@@ -4,7 +4,7 @@ System styles
 2: Variables & tokens
 3: Breakpoints
 4: Layout/Grid
-5: Typography
+5: Tekst & Typography
 6: Forms
 7: Buttons
 8: Media
@@ -13,7 +13,7 @@ System styles
 11: Custom CSS
 */
 
-/*1: Reset*/
+/* ========== 1: Reset ========== */
 /* Simpelt browser reset */
 * {
   margin: 0;
@@ -53,8 +53,7 @@ button, input, textarea, select {
   outline-offset: 2px;
 }
 
-
-/* 2: Variables */
+/* ========== 2: Variables & tokens ========== */
 
 :root {
 /* ===== Colors ===== */
@@ -114,7 +113,7 @@ button, input, textarea, select {
 
 
 
-/*Tokens - surface*/
+/* Tokens - surface*/
 .bg-dark {
     background-color: var(--color-dark);
 }
@@ -128,7 +127,7 @@ button, input, textarea, select {
     color: var(--color-bright);
 }
 
-/* 3: Layout & Breakpoints */
+/* ========== 3: Layout & Breakpoints ========== */
 
 .container {
     width: var(--container-fluid);
@@ -152,7 +151,7 @@ button, input, textarea, select {
     padding: var(--space-xxl) var(--space-md);
 }
 
-/* 4: Grid */
+/* ========== 4: Grid ========== */
 
 /* Grundlæggende grid (mobile-first) */
 .grid {
@@ -287,7 +286,7 @@ button, input, textarea, select {
 }
 
 
-/* Nestet grid */
+/* Nested grid */
 .nested-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -309,7 +308,61 @@ button, input, textarea, select {
     .content-around { align-content: space-around; }
     .content-stretch { align-content: stretch; }
 
-/* 5:Typography */
+/* Flexbox classes */
+
+/* Flebox display */
+.flex          { display: flex; }
+.inline-flex   { display: inline-flex; }
+
+/* Flebox retning */
+.flex-row        { flex-direction: row; }
+.flex-row-reverse { flex-direction: row-reverse; }
+.flex-col        { flex-direction: column; }
+.flex-col-reverse { flex-direction: column-reverse; }
+
+/* Justering af indhold */
+.justify-start    { justify-content: flex-start; }
+.justify-end      { justify-content: flex-end; }
+.justify-center   { justify-content: center; }
+.justify-between  { justify-content: space-between; }
+.justify-around   { justify-content: space-around; }
+.justify-evenly   { justify-content: space-evenly; }
+
+/* Lodret justering */
+.items-start      { align-items: flex-start; }
+.items-end        { align-items: flex-end; }
+.items-center     { align-items: center; }
+.items-baseline   { align-items: baseline; }
+.items-stretch    { align-items: stretch; }
+
+/* Individuel lodret justering */
+.self-start      { align-self: flex-start; }
+.self-end        { align-self: flex-end; }
+.self-center     { align-self: center; }
+.self-baseline   { align-self: baseline; }
+.self-stretch    { align-self: stretch; }
+
+/* Individuel vandret justering */
+.justify-self-start  { justify-self: start; }
+.justify-self-end    { justify-self: end; }
+.justify-self-center { justify-self: center; }
+.justify-self-stretch { justify-self: stretch; }
+
+/* Omflytning */
+.flex-wrap        { flex-wrap: wrap; }
+.flex-nowrap      { flex-wrap: nowrap; }
+.flex-wrap-reverse { flex-wrap: wrap-reverse; }
+
+/* Afstand mellem elementer */
+.gap-zero   { gap: var(--space-zero); }
+.gap-xs  { gap: var(--space-xs); }
+.gap-sm  { gap: var(--space-sm); }
+.gap-md  { gap: var(--space-md); }
+.gap-lg  { gap: var(--space-lg); }  
+.gap-xl  { gap: var(--space-xl); }
+.gap-xxl { gap: var(--space-xxl); }
+
+/* ========== 5: Tekst & Typografi ========== */
 body {
     font-size: var(--font-size-base);
     font-family: var(--font-family-sans);
@@ -379,7 +432,7 @@ h3, .text-md {
 }
 
 
-/* 6: Forms */
+/* ========== 6: Forms ========== */
 .form-group {
   margin-bottom: var(--space-md);
 }
@@ -462,7 +515,8 @@ input[type="range"]::-webkit-slider-thumb {
   cursor: pointer;
 }
 
-/* 7: Buttons & links */
+/* ========== 7: Buttons & links ========== */
+
 input[type="submit"],
 button, .btn {
   background-color: var(--color-primary);
@@ -540,24 +594,101 @@ a:hover {
   text-decoration: none;
 }
 
-/* 8:Media */
+/* ========== 8: Media ========== */
 img {
     width: 100%;
     max-width: 100%;
     height: auto;
 }
 
-/* 9: Helpers */
-.spacing-zero { padding: var(--space-zero); }
-.spacing-xs { padding: var(--space-xs); }
-.spacing-sm { padding: var(--space-sm); }
-.spacing-md { padding: var(--space-md); }   
-.spacing-lg { padding: var(--space-lg); }
-.spacing-xl { padding: var(--space-xl); } 
-.spacing-xxl { padding: var(--space-xxl); }
-.spacing-xxxl { padding: var(--space-xxxl); }
+/* ========== 9: Helpers ========== */
+/* Padding classes */
+.p-zero { padding: var(--space-zero); }
+.p-xs { padding: var(--space-xs); }
+.p-sm { padding: var(--space-sm); }
+.p-md { padding: var(--space-md); }   
+.p-lg { padding: var(--space-lg); }
+.p-xl { padding: var(--space-xl); } 
+.p-xxl { padding: var(--space-xxl); }
+.p-xxxl { padding: var(--space-xxxl); }
+.p-t-zero { padding-top: var(--space-zero); }
+.p-t-xs { padding-top: var(--space-xs); }
+.p-t-sm { padding-top: var(--space-sm); }
+.p-t-md { padding-top: var(--space-md); }   
+.p-t-lg { padding-top: var(--space-lg); }
+.p-t-xl { padding-top: var(--space-xl); } 
+.p-t-xxl { padding-top: var(--space-xxl); }
+.p-t-xxxl { padding-top: var(--space-xxxl); }
+.p-r-zero { padding-right: var(--space-zero); }
+.p-r-xs { padding-right: var(--space-xs); }
+.p-r-sm { padding-right: var(--space-sm); }
+.p-r-md { padding-right: var(--space-md); }   
+.p-r-lg { padding-right: var(--space-lg); }
+.p-r-xl { padding-right: var(--space-xl); } 
+.p-r-xxl { padding-right: var(--space-xxl); }
+.p-r-xxxl { padding-right: var(--space-xxxl); }
+.p-b-zero { padding-bottom: var(--space-zero); }
+.p-b-xs { padding-bottom: var(--space-xs); }
+.p-b-sm { padding-bottom: var(--space-sm); }
+.p-b-md { padding-bottom: var(--space-md); }   
+.p-b-lg { padding-bottom: var(--space-lg); }
+.p-b-xl { padding-bottom: var(--space-xl); } 
+.p-b-xxl { padding-bottom: var(--space-xxl); }
+.p-b-xxxl { padding-bottom: var(--space-xxxl); }
+.p-l-zero { padding-left: var(--space-zero); }
+.p-l-xs { padding-left: var(--space-xs); }
+.p-l-sm { padding-left: var(--space-sm); }
+.p-l-md { padding-left: var(--space-md); }   
+.p-l-lg { padding-left: var(--space-lg); }
+.p-l-xl { padding-left: var(--space-xl); } 
+.p-l-xxl { padding-left: var(--space-xxl); }
+.p-l-xxxl { padding-left: var(--space-xxxl); }
 
-/* 10: Components */
+/* Margin classes */
+.m-zero { margin: var(--space-zero); }
+.m-xs { margin: var(--space-xs); }
+.m-sm { margin: var(--space-sm); }
+.m-md { margin: var(--space-md); }   
+.m-lg { margin: var(--space-lg); }
+.m-xl { margin: var(--space-xl); } 
+.m-xxl { margin: var(--space-xxl); }
+.m-xxxl { margin: var(--space-xxxl); }
+.m-t-zero { margin-top: var(--space-zero); }
+.m-t-xs { margin-top: var(--space-xs); }
+.m-t-sm { margin-top: var(--space-sm); }
+.m-t-md { margin-top: var(--space-md); }   
+.m-t-lg { margin-top: var(--space-lg); }
+.m-t-xl { margin-top: var(--space-xl); } 
+.m-t-xxl { margin-top: var(--space-xxl); }
+.m-t-xxxl { margin-top: var(--space-xxxl); }
+.m-r-zero { margin-right: var(--space-zero); }
+.m-r-xs { margin-right: var(--space-xs); }
+.m-r-sm { margin-right: var(--space-sm); }
+.m-r-md { margin-right: var(--space-md); }   
+.m-r-lg { margin-right: var(--space-lg); }
+.m-r-xl { margin-right: var(--space-xl); } 
+.m-r-xxl { margin-right: var(--space-xxl); }
+.m-r-xxxl { margin-right: var(--space-xxxl); }
+.m-b-zero { margin-bottom: var(--space-zero); }
+.m-b-xs { margin-bottom: var(--space-xs); }
+.m-b-sm { margin-bottom: var(--space-sm); }
+.m-b-md { margin-bottom: var(--space-md); }   
+.m-b-lg { margin-bottom: var(--space-lg); }
+.m-b-xl { margin-bottom: var(--space-xl); } 
+.m-b-xxl { margin-bottom: var(--space-xxl); }
+.m-b-xxxl { margin-bottom: var(--space-xxxl); }
+.m-l-zero { margin-left: var(--space-zero); }
+.m-l-xs { margin-left: var(--space-xs); }
+.m-l-sm { margin-left: var(--space-sm); }
+.m-l-md { margin-left: var(--space-md); }   
+.m-l-lg { margin-left: var(--space-lg); }
+.m-l-xl { margin-left: var(--space-xl); } 
+.m-l-xxl { margin-left: var(--space-xxl); }
+.m-l-xxxl { margin-left: var(--space-xxxl); }
+
+
+
+/* ========== 10: Components ========== */
 
 /* Cards */
 .card {
@@ -589,8 +720,4 @@ img {
   color: var(--color-secondary-dark);
 }
 
-
-
-/*11: Custom CSS*/
-
-
+/* ========== 11: Custom CSS ========== */
