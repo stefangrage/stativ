@@ -7,90 +7,15 @@
     <title>Stativ starter</title>
 </head>
 <body>
-    <div class="container-full">
-        <div class="container">container i container-full</div>
-            <h1>Sativ starter full</h1>
-            <p>Her kommer lidt tekst</p>
-            <p>Og mere</p>
-    </div>
-    <div class="container">
-            <h1>Stativ starter</h1>
-            <p>Her kommer lidt tekst</p>
-            <p>Og mere</p>
-    </div>
-    <div class="container-narrow">
-            <h1>Stativ starter</h1>
-            <p>Her kommer lidt tekst</p>
-            <p>Og mere</p>
-    </div>
-    
-
-    <div class="container">
-        <p>hvor er det?</p>
-        <!-- Eksempel 1: Simpelt grid med responsive kolonner -->
-        <div class="grid">
-            <div class="col-12 col-sm-4 col-md-4 col-lg-3 " >
-                Kolonne 1 - 12 på mobil - 4 small - 4 desktop - 2 stor skærm
+    <div class="container-full bg-dark text-bright">
+        <div class="container grid">
+            <div class="col-12 col-md-6 col-lg-8">
+                <img src="filer/stativ.jpg" alt="stativ hero foto"  >
             </div>
-            <div class="col-12 col-md-4 col-lg-3 col-xl-2">
-            Kolonne 1 - 12 på mobil - 4 medium - 3 desktop - 2 stor skærm </div>
-            <div class="col-12  col-md-4 col-lg-6 col-xl-8">
-               Kolonne 1 - 12 på mobil - 4 medium - 3 desktop - 2 stor skærm
-            </div>
-        </div>
-
-        <!-- Eksempel 2: Nestet grid -->
-        <div class="grid">
-            <div class="col-12 col-md-8">
-                <h3>Hovedindhold</h3>
-                <div class="nested-grid">
-                    <div class="col-6 col-md-4">Nestet kolonne 1 (6/12 mobil, 4/12 tablet)</div>
-                    <div class="col-6 col-md-4">Nestet kolonne 2 (6/12 mobil, 4/12 tablet)</div>
-                    <div class="col-12 col-md-4">Nestet kolonne 3 (12/12 mobil, 4/12 tablet)</div>
-                </div>
-            </div>
-            <div class="col-12 col-md-4">
-                <h3>Sidebjælke</h3>
-                <p>Her er noget sideindhold.</p>
-                <p>Og her er et link: <a href="#">Klik her</a></p>
-                <p>Og her er et link: <a href="#" class="btn">Button link her</a></p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="grid">
-            <div class="col-10 col-start-2 col-sm-8 col-sm-start-5 col-md-6 col-md-start-7 col-lg-4 col-lg-start-3" style="background-color: white; border: 1px solid black; padding: 10px; ">
-                <h3>Kolonne 1</h3>
-                <p>Indhold i kolonne 1. adsfaslkfdj asdlkf jsadæfl jasdfæl kasjdfæl askdjfælaskd fjasldf jasdlkfj</p>
-            </div>
-                        
-            
-            <div class="col-12 col-sm-6 col-md-8 col-lg-4" style="background-color: white; border: 1px solid black; padding: 10px; ">
-                <h3>Kolonne 2</h3>
-                <p>Indhold i kolonne 2. adsfaslkfdj asdlkf jsadæfl jasdfæl kasjdfæl askdjfælaskd fjasldf jasdlkfj</p>
-            </div>
-
-            <div class="col-6 col-sm-6 col-md-8 col-lg-4" style="background-color: white; border: 1px solid black; padding: 10px; ">
-                <h3>Kolonne 3</h3>
-                <p>Indhold i kolonne 3. adsfaslkfdj asdlkf jsadæfl jasdfæl kasjdfæl askdjfælaskd fjasldf jasdlkfj</p>
-            </div>
-
-            <div class="col-12 col-sm-6 col-md-8 col-lg-4" style="background-color: white; border: 1px solid black; padding: 10px; ">
-                <h3>Kolonne 4</h3>
-                <p>Indhold i kolonne 4. adsfaslkfdj asdlkf jsadæfl jasdfæl kasjdfæl askdjfælaskd fjasldf jasdlkfj</p>
-            </div>
-
-            <div class="col-12 col-md-6" style="background-color: white; border: 1px solid black; padding: 10px; ">
-                <h3>form</h3>
-                <form>
-                    <label for="name">Navn:</label>
-                    <input type="text" id="name" name="name"><br><br>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                    <input type="submit" value="Send">
-                </form>
-                
+            <div class="col-12 col-md-6 col-lg-4 content-center text-center md:text-left">
+                <h1>Stativ</h1>
+                <p>Et lille, ultrakompakt CSS-skelet til dit næste website</p>
+                <a href="https://github.com/stefangrage/stativ/" class="btn btn-lg btn-outline">Hent Stativ på GitHub</a>
             </div>
         </div>
     </div>
