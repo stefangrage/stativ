@@ -7,6 +7,27 @@
     <title>Stativ starter</title>
 </head>
 <body>
+    <header class="">
+        <div class="container flex flex-row justify-between items-center p-md">
+            <div class="logo"><a href="/" class="text-decoration-none text-xl">Stativ</a></div>
+            <nav class="hidden visible-md">
+                <a href="#" class="p-r-sm">Navigation 1</a>
+                <a href="#" class="p-r-sm">Navigation 2</a>
+                <a href="#">Navigation 3</a>
+            </nav>
+            <div class="navicon hidden-md">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6" height="32" width="32">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </div>
+            <nav class="mobile-menu hidden flex-col justify-center items-center hidden-md">
+                <a href="#" class="p-r-sm">Navigation 1</a>
+                <a href="#" class="p-r-sm">Navigation 2</a>
+                <a href="#">Navigation 3</a>
+            </nav>
+        </div>
+    </header>
+
     <div class="container-full bg-dark text-bright p-zero">
         <div class="container grid">
             <div class="col-12 col-md-6 col-lg-8">
@@ -52,5 +73,14 @@
             <p>Med Stativ kan du nemt tilpasse farver, typografi og layout for at matche din egen stil og branding.</p>
         </div>
     </div>
+    <script>
+        const navicon = document.querySelector('.navicon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        navicon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+    </script>
 </body>
 </html>

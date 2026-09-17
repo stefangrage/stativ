@@ -603,6 +603,31 @@ img {
 
 /* ========== 9: Helpers ========== */
 /* Padding classes */
+.text-decoration-none { text-decoration: none; }
+
+/* Mobil (default) */
+.hidden   { display: none; }
+.visible    { display: block; }
+
+/* Mellemstore skærme (sm: ≥760px) */
+@media (min-width: 760px) {
+  .hidden-sm   { display: none; }
+  .visible-sm    { display: block; }
+}
+
+/* Store skærme (md: ≥960px) */
+@media (min-width: 960px) {
+  .hidden-md   { display: none; }
+  .visible-md    { display: block; }
+}
+
+/* Extra store skærme (lg: ≥1200px) */
+@media (min-width: 1200px) {
+  .hidden-lg   { display: none; }
+  .visible-lg    { display: block; }
+}
+
+
 .p-zero { padding: var(--space-zero); }
 .p-xs { padding: var(--space-xs); }
 .p-sm { padding: var(--space-sm); }
@@ -689,6 +714,26 @@ img {
 
 
 /* ========== 10: Components ========== */
+/*Navbar*/
+/* Navbar styling */
+
+.mobile-menu{
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: var(--color-bright);
+  width: 100%;
+  padding: 96px var(--space-xl);
+  z-index: 1000;
+}
+.mobile-menu a {
+  padding: var(--space-sm) 0;
+}
+.logo, .navicon{
+  z-index: 1001;
+}
+
 
 /* Cards */
 .card {
